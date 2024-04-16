@@ -1,0 +1,27 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<h1 class="mx-auto">Calculadora Ejercicio Uno de Ahuitz Caracciolo</h1>
+<br><br>
+
+<div class="d-flex justify-content-center">
+    <label for="#edadUno" class="mr-2">Edad Uno</label>
+    <input class="ml-2" type="number" min="0" step="1" #edadUno>
+    <br>
+    <label for="#edadDos" class="mr-2 ml-3">Edad Dos</label>
+    <input type="number" min="0" step="1" #edadDos>
+    <br><br>
+</div>
+<br>
+<div class="d-flex justify-content-center">
+    <label for="#promedioInput" class="mr-2">Promedio</label>
+    <input disabled type="text"#promedioInput>
+    <br>
+    <label for="#sumaInput" class="mr-2 ml-3">Suma</label>
+    <input disabled type="text"#sumaInput>
+</div>
+<br>
+<div class="d-flex justify-content-center">
+    <button (click) = "calcularEdades()" class="btn btn-dark mr-3">Calcular</button>
+    <button (click) = "limpiarInputs()" class="btn btn-dark">Limpiar</button>
+</div>
+
