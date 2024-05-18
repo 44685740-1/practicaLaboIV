@@ -1,17 +1,19 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { BienvenidoComponent } from './bienvenido/bienvenido.component'; // Corrected import
-import { LoginComponent } from './login/login.component'; // Corrected import
-import { ErrorComponent } from './error/error.component'; // Corrected import
+import { Routes } from '@angular/router';
+import  LoginComponent  from './components/login/login.component';
+import  BienvenidoComponent  from './components/bienvenido/bienvenido.component';
+import  ErrorComponent  from './components/error/error.component';
 
 export const routes: Routes = [
-  { path: 'bienvenido', component: BienvenidoComponent }, // Corrected component reference
-  { path: 'login', component: LoginComponent }, // Corrected component reference
-  { path: 'error', component: ErrorComponent } // Corrected component reference
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'bienvenida',
+    component: BienvenidoComponent,
+  },
+  {
+    path: 'error',
+    component: ErrorComponent,
+  },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

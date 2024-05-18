@@ -1,12 +1,16 @@
-import { Component, input, ElementRef, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, input, ElementRef, ViewChild} from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; // Import CommonModule
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLink,
     FormsModule
   ],
   templateUrl: './app.component.html',
@@ -14,8 +18,10 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AppComponent {
+  title = 'Ruteo';
   promedioEdad! : number;
   sumaEdades!: number;
+  mostrarLoginComponent : boolean = false;
 
   @ViewChild('promedioInput',{static:false}) promedioInput!: ElementRef;
   @ViewChild('sumaInput',{static:false}) sumaInput!: ElementRef;
@@ -33,4 +39,9 @@ export class AppComponent {
     this.promedioInput.nativeElement.value = null;
     this.sumaInput.nativeElement.value = null;
   }
+
+  toggleLoginComponent() {
+    this.mostrarLoginComponent = !this.mostrarLoginComponent;
+  }
 }
+

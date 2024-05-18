@@ -1,6 +1,5 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<h1 class="mx-auto">Calculadora Ejercicio Uno de Ahuitz Caracciolo</h1>
+    <h1 class="mx-auto">Calculadora Ejercicio Uno de Ahuitz Caracciolo</h1>
 <br><br>
 
 <div class="d-flex justify-content-center">
@@ -24,4 +23,13 @@
     <button (click) = "calcularEdades()" class="btn btn-dark mr-3">Calcular</button>
     <button (click) = "limpiarInputs()" class="btn btn-dark">Limpiar</button>
 </div>
+
+<br><br>
+<button routerLink ="login" class="btn btn-dark m-1">Login</button>
+<button routerLink="bienvenida" class="btn btn-dark m-1">Bienvenida</button>
+<button routerLink="error" class="btn btn-dark m-1">Error</button>
+
+
+
+<router-outlet ></router-outlet> 
 

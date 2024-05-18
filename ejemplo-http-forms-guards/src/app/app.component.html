@@ -1,0 +1,32 @@
+<div>
+  <form [formGroup]="loginForm">
+    <label for="inputMail">Ingrese su Mail</label>
+    <input id="inputMail" formControlName="email" type="email">
+    @if(loginForm.get('email'); as aux) {
+      @if(aux.invalid && (aux.dirty || aux.touched)) 
+      {
+        <div class="alert hide alert-danger" role="alert">
+          {{aux.hasError("required") ? "Es requerido" : "Es invalido"}}
+        </div>
+      }
+    }
+    <br>
+    <label for="inputPassword">Ingrese su Contraseña</label>
+    <input id="inputPassword" formControlName="password" type="password">
+    @if(loginForm.get('password'); as aux) {
+      @if(aux.invalid && (aux.dirty || aux.touched)) 
+      {
+        <div class="alert hide alert-danger" role="alert">
+          Requerido
+        </div>
+      }
+    }
+    <br>
+    <button (click) = "loguear()">Entrar</button>
+  </form>
+</div>
+
+<button (click)="mostrarUsuario()">Mostrar Usuario</button>
+<br>
+<button routerLink = "home" >home</button>
+<router-outlet></router-outlet>

@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './bienvenido.component.html',
   styleUrl: './bienvenido.component.css'
 })
-export class BienvenidoComponent {
-
-}
+export default class BienvenidoComponent {}
